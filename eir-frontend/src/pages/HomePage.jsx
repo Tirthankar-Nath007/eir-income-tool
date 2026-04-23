@@ -8,7 +8,7 @@ import { Button } from "../components/ui/button";
 import { Avatar, AvatarFallback } from "../components/ui/avatar";
 import { LogOut, User } from "lucide-react";
 import logo from "../assets/tvscredit-logo.png";
-import EIRIncomeProjectionTool from "../EIRIncomeProjectionTool";
+import EIRIncomeProjectionTool from "../EIRIncomeProjectionTool.jsx";
 
 const HomePage = ({ user, onLogout }) => {
   return (
