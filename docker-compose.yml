@@ -1,0 +1,20 @@
+services:
+  eir-frontend:
+    build: ./eir-frontend
+    container_name: eir-frontend
+    ports:
+      - "8081:80"
+    networks:
+      - app_net
+
+  eir-backend:
+    build: ./eir-backend
+    container_name: eir-backend
+    env_file:
+      - .env
+    networks:
+      - app_net
+
+networks:
+  app_net:
+    driver: bridge
