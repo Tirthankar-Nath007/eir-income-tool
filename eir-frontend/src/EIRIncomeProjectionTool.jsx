@@ -987,7 +987,6 @@ const EIRIncomeProjectionTool = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 
