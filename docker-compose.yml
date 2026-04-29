@@ -4,6 +4,7 @@ services:
     container_name: eir-frontend
     ports:
       - "8090:80"
+    restart: unless-stopped
     networks:
       - app_net
 
@@ -12,9 +13,15 @@ services:
     container_name: eir-backend
     env_file:
       - .env
+    restart: unless-stopped
     networks:
       - app_net
 
 networks:
   app_net:
     driver: bridge
+logging:
+  driver: "json-file"
+  options:
+    max-size: "10m"
+    max-file: "3"
